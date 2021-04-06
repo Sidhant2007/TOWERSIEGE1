@@ -19,7 +19,12 @@ class Block{
         rectMode(CENTER);
         rect( 0, 0, this.width, this.height);
         pop();
-      }else{World.remove(world,this.body)}
+      }else{
+        World.remove(world,this.body)
+        push();
+         this.visibility = this.visibility -5;
+         pop(); 
+      }
       }
       Score(){
         if(this.visibility<0 && this.visibility >-1005){
